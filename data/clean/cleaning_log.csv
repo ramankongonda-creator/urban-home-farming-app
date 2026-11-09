@@ -1,0 +1,32 @@
+dataset,step,issue,rows_affected,action
+survey,A3,Duplicate submission (same device),45,"Dropped later copy, kept first"
+survey,A4,City spelt in several ways,460,Mapped to canonical name + tier
+survey,A5,household_raw: typed as text,175,Parsed to number
+survey,A5,veg_spend_raw: typed as text,597,Parsed to number
+survey,A5,wtp_system_raw: typed as text,584,Parsed to number
+survey,A5,wtp_refill_raw: typed as text,411,Parsed to number
+survey,A6,Income 'Prefer not to say',138,Set to missing + flag; shown as 'Not disclosed'
+survey,A8,Speeder (under 2 minutes),40,Response dropped
+survey,A8,Straight-liner and speeder,18,Response dropped
+survey,A8,Impossible household size,6,Response dropped
+survey,A8,Rs 0 veg spend with 3+ people,6,Response dropped
+survey,A8,Max price under Rs 200 but 'Very likely',8,Response dropped
+survey,A9,veg_spend outside 3xIQR fence,8,"Value set to missing, response kept"
+survey,A9,wtp_system outside 3xIQR fence,10,"Value set to missing, response kept"
+survey,A9,wtp_refill outside 3xIQR fence,0,"Value set to missing, response kept"
+survey,A10,Veg spend missing (blank or outlier),104,Filled with household-size x income median
+survey,A10,Max kit price missing,121,Left missing (not imputed)
+survey,A10,Max refill price missing,154,Left missing (not imputed)
+pipeline,B2,Duplicate lead (same phone),126,Dropped later lead ID
+pipeline,B3,Lead date not in yyyy-mm-dd,693,Parsed with explicit formats
+pipeline,B4,City spelt in several ways,655,Mapped to canonical
+pipeline,B4,Channel missing,84,Labelled 'Unknown' (kept)
+pipeline,B4,"Yes/No written as Y, 1, TRUE, yes",1296,Converted to 0/1
+pipeline,B4,Income not given,1050,Labelled 'Not disclosed' (kept)
+pipeline,B5,Order value typed as text,164,Parsed to number
+pipeline,B5,Order value with extra zero,3,Divided by 10
+pipeline,B6,Purchase date before lead date,2,Rebuilt from lead date + days to close
+pipeline,B6,NPS outside 0-10,10,Set to missing
+pipeline,B6,Contact time placeholder 999,42,Missing -> channel median
+pipeline,B6,Acquisition cost missing,42,Channel median
+pipeline,B6,Negative months active,2,Set to missing
