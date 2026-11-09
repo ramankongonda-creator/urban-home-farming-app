@@ -1,0 +1,24 @@
+issue,rows
+Yes-saying bias (+1 on all attitude items),221
+Q2 'Prefer not to say',138
+Q7 left blank,97
+Q16a left blank,113
+Q16b left blank,157
+Planted outliers / bad responses,78
+Duplicate submissions,45
+--- pipeline ---,
+City spelt inconsistently,756
+Channel spelt inconsistently,630
+Channel missing,84
+Income not given,1050
+Lead date in dd/mm/yyyy,504
+Lead date as 'Mon dd yyyy',210
+"Yes/No stored as Y, 1, TRUE and similar",1260
+Order value typed as text,99
+Order value with an extra zero,3
+Purchase date before the pilot began,2
+NPS outside 0-10,10
+Contact time placeholder 999,42
+Acquisition cost missing,42
+Negative months active,2
+"Duplicate lead (same phone, entered twice)",126
